@@ -18,6 +18,7 @@ function reducer(state = initialState, action) {
         case GET_SMURFS_SUCCESS:
             return {
                 ...state,
+                smurfs: action.payload,
                 isGetting: false,
                 error: null
             }

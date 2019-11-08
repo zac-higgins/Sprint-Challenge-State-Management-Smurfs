@@ -21,8 +21,8 @@ export function getThoseSmurfs() {
         return axios
             .get('http://localhost:3333/smurfs')
             .then(res => {
-                console.log("Here's thsoe Smurfs you asked for:", res);
-                const info = res
+                console.log("Here's thsoe Smurfs you asked for:", res.data);
+                const info = res.data
                 dispatch(smurfsLoadingSuccess(info))
             })
             .catch(err => dispatch(smurfsLoadingFailed(err)))
