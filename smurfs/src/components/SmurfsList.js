@@ -4,6 +4,7 @@ import { getThoseSmurfs } from '../actions';
 
 function SmurfsList(props) {
     console.log("Smurfs List", props.smurfs);
+    // props.dispatch(getThoseSmurfs())
 
     return (
         <div>

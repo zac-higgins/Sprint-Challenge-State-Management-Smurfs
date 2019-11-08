@@ -1,5 +1,5 @@
-import { GET_SMURFS_LOADING, GET_SMURFS_SUCCESS, GET_SMURFS_FAILED, PUSH_SMURF } from '../actions';
-import axios from 'axios';
+import { GET_SMURFS_LOADING, GET_SMURFS_SUCCESS, GET_SMURFS_FAILED, PUSH_SMURF, smurfsLoading } from '../actions';
+
 
 const initialState = {
     smurfs: [],
@@ -30,9 +30,6 @@ function reducer(state = initialState, action) {
                 isGetting: false,
                 error: action.payload
             };
-        case PUSH_SMURF:
-            return axios
-                .post('http://localhost:3333/smurfs', action.payload);
         default:
             return state;
     };
